@@ -4,6 +4,8 @@
 
 ### How to create a blackmarket store through **tp_stores** (example):
 
+1. When creating a blackmarket schedule, there is an option called `StoreName`, this is the name of the store that must open through **tp_stores**, which means that if our input is `BLACKMARKET`, the store on `Config.Stores` must also be named that way.
+
 1. On `Config.Stores` add a store which is **IsCustom = true**, like so:
 
 ```lua
