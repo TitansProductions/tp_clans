@@ -1,6 +1,5 @@
-# tp_clans
 
-## __Tutorials & Tips:__
+# __Tutorials & Tips:__
 
 ### How to create a blackmarket store through **tp_stores** (example):
 
