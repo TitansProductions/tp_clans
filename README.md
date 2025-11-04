@@ -10,14 +10,14 @@ __Example:__
 ```lua
 -- The location - coords for the merchant to spawn.
 RandomCoords = {
-    { Coords = { x = -3955.85, y = -2133.93, z = -5.578, h = 97.171997 }, StoreName = 'BLACKMARKET'}, -- <---------------
+    { Coords = { x = -3955.85, y = -2133.93, z = -5.578, h = 97.171997 }, StoreName = 'BLACKMARKET'}, -- <------
 },
 ```
 
 2. On `Config.Stores` add a store which is **IsCustom = true**, like so:
 
 ```lua
-    ['BLACKMARKET'] = {
+    ['BLACKMARKET'] = { -- <------ @StoreName
 
         StoreName = "BLACKMARKET",
 
