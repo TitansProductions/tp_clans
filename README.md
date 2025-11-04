@@ -43,7 +43,7 @@ Config.StoreProductPackages = {
 
         ['sell'] = {
 
-            { label = "Gold Sticks",   item = "goldtooth",     currency = "dollars",   price = 1,  canGiveItems = false, givenItem = {},  givenAmount = {}, givenDisplay = {},  category = "jewerly" },
+            { label = "Gold Tooth",    item = "goldtooth",     currency = "dollars",   price = 1,  canGiveItems = false, givenItem = {},  givenAmount = {}, givenDisplay = {},  category = "jewerly" },
             { label = "Gold Ring",     item = "goldring",      currency = "dollars",   price = 2,  canGiveItems = false, givenItem = {},  givenAmount = {}, givenDisplay = {},  category = "jewerly" },
             { label = "Gold Bracelet", item = "goldbracelet",  currency = "dollars",   price = 3,  canGiveItems = false, givenItem = {},  givenAmount = {}, givenDisplay = {},  category = "jewerly" },
             { label = "Gold Necklace", item = "goldnecklace",  currency = "dollars",   price = 3,  canGiveItems = false, givenItem = {},  givenAmount = {}, givenDisplay = {},  category = "jewerly" },
