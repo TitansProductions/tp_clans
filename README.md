@@ -11,3 +11,26 @@
 | resetclanweeklymissions [clanId]           | tp_clans.resetweeklymissions  | Adds extra inventory weight capacity on the selected user.                    | Yes |
 
 - The ace permission: `tp_clans.all` grants permissions to all commands.
+
+## Development API
+
+**__CLIENT SIDE__:**
+
+API Getter Function
+
+```lua
+local ClansAPI = exports.tp_clans:getAPI()
+```
+
+1. Get Player Raiding State (If player is raiding)
+
+```lua
+--- @returns boolean
+local isPlayerRaiding = ClansAPI.IsPlayerRaiding()
+```
+
+
+
+
+
+
