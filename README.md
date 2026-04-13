@@ -32,26 +32,6 @@ local PlayerData = ClansAPI.GetPlayerData()
 --- @param PlayerData.ClanId return integer
 --- @param PlayerData.IsLoaded return boolean
 --- @param PlayerData.Clans return table
-
--- In case you want to retrive a Clan Data:
-
--- @return table
-local ClanData = PlayerData.Clans[PlayerData.ClanId]
-
---- @param ClanData.coords return table
---- @param ClanData.furnitures return table
---- @param ClanData.raids_history return table
---- @param ClanData.members return table
---- @param ClanData.notifications return table
---- @param ClanData.alliances return table
---- @param ClanData.identifier return string
---- @param ClanData.charidentifier return integer
---- @param ClanData.name return string
---- @param ClanData.id return integer
---- @param ClanData.ledger return integer
---- @param ClanData.upgrade return integer
---- @param ClanData.level return integer
---- @param ClanData.level_experience return integer
 ```
 
 2. Get Player Raiding State (If player is raiding)
@@ -75,4 +55,25 @@ local raidedClanId = ClansAPI.GetRaidingClanId()
 local isLeader = ClansAPI.IsPlayerClanLeader()
 ```
 
+5. Get Clan Data
+
+```lua
+   -- @return table
+local ClanData = PlayerData.Clans[PlayerData.ClanId]
+
+--- @param ClanData.coords return table
+--- @param ClanData.furnitures return table
+--- @param ClanData.raids_history return table
+--- @param ClanData.members return table
+--- @param ClanData.notifications return table
+--- @param ClanData.alliances return table
+--- @param ClanData.identifier return string
+--- @param ClanData.charidentifier return integer
+--- @param ClanData.name return string
+--- @param ClanData.id return integer
+--- @param ClanData.ledger return integer
+--- @param ClanData.upgrade return integer
+--- @param ClanData.level return integer
+--- @param ClanData.level_experience return integer
+```
 
