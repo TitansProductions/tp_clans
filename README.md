@@ -42,8 +42,16 @@ local ClanData = PlayerData.Clans[PlayerData.ClanId]
 --- @param ClanData.furnitures return table
 --- @param ClanData.raids_history return table
 --- @param ClanData.members return table
+--- @param ClanData.notifications return table
+--- @param ClanData.alliances return table
 --- @param ClanData.identifier return string
 --- @param ClanData.charidentifier return integer
+--- @param ClanData.name return string
+--- @param ClanData.id return integer
+--- @param ClanData.ledger return integer
+--- @param ClanData.upgrade return integer
+--- @param ClanData.level return integer
+--- @param ClanData.level_experience return integer
 ```
 
 2. Get Player Raiding State (If player is raiding)
