@@ -48,5 +48,11 @@ local isPlayerRaiding = ClansAPI.IsPlayerRaiding()
 local raidedClanId = ClansAPI.GetRaidingClanId()
 ```
 
+4. Get Player Clan Leadership State (if the player is the leader of the clan)
+
+```lua
+--- @return boolean
+local isLeader = ClansAPI.IsPlayerClanLeader()
+```
 
 
