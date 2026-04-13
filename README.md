@@ -58,7 +58,7 @@ local isLeader = ClansAPI.IsPlayerClanLeader()
 5. Get Clan Data
 
 ```lua
-   -- @return table
+-- @return table
 local ClanData = PlayerData.Clans[PlayerData.ClanId]
 
 --- @param ClanData.coords return table
