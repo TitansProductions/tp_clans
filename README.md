@@ -29,7 +29,7 @@ local ClansAPI = exports.tp_clans:getAPI()
 --- @return table
 local PlayerData = ClansAPI.GetPlayerData()
 
---- @param PlayerData.ClanId @return integer
+--- @param PlayerData.ClanId return integer
 --- @param PlayerData.IsLoaded return boolean
 --- @param PlayerData.Clans return table
 
