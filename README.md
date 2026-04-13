@@ -22,14 +22,27 @@ API Getter Function
 local ClansAPI = exports.tp_clans:getAPI()
 ```
 
-1. Get Player Raiding State (If player is raiding)
+
+1. Get Player Data
+
+```lua
+--- @return table
+local PlayerData = ClansAPI.GetPlayerData()
+
+--- @PlayerData return
+--- PlayerData.ClanId
+--- PlayerData.IsLoaded
+--- return table - PlayerData.Clans
+```
+
+2. Get Player Raiding State (If player is raiding)
 
 ```lua
 --- @return boolean
 local isPlayerRaiding = ClansAPI.IsPlayerRaiding()
 ```
 
-2. Get Player Raiding Clan Id
+3. Get Player Raiding Clan Id
 
 ```lua
 --- @return integer
