@@ -29,10 +29,9 @@ local ClansAPI = exports.tp_clans:getAPI()
 --- @return table
 local PlayerData = ClansAPI.GetPlayerData()
 
---- @PlayerData return
---- PlayerData.ClanId
---- PlayerData.IsLoaded
---- return table - PlayerData.Clans
+--- @param PlayerData.ClanId return integer
+--- @param PlayerData.IsLoaded return boolean
+--- @param PlayerData.Clans return table
 ```
 
 2. Get Player Raiding State (If player is raiding)
