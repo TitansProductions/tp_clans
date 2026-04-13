@@ -25,12 +25,16 @@ local ClansAPI = exports.tp_clans:getAPI()
 1. Get Player Raiding State (If player is raiding)
 
 ```lua
---- @returns boolean
+--- @return boolean
 local isPlayerRaiding = ClansAPI.IsPlayerRaiding()
 ```
 
+2. Get Player Raiding Clan Id
 
-
+```lua
+--- @return integer
+local raidedClanId = ClansAPI.GetRaidingClanId()
+```
 
 
 
