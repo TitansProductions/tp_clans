@@ -14,7 +14,7 @@
 
 ## Development API
 
-**__CLIENT SIDE__:**
+### CLIENT SIDE:
 
 API Getter Function
 
