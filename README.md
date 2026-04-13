@@ -38,10 +38,12 @@ local PlayerData = ClansAPI.GetPlayerData()
 -- @return table
 local ClanData = PlayerData.Clans[PlayerData.ClanId]
 
--- @param ClanData.coords return table
--- @param ClanData.members return table
--- @param ClanData.identifier return string
--- @param ClanData.charidentifier return integer
+--- @param ClanData.coords return table
+--- @param ClanData.furnitures return table
+--- @param ClanData.raids_history return table
+--- @param ClanData.members return table
+--- @param ClanData.identifier return string
+--- @param ClanData.charidentifier return integer
 ```
 
 2. Get Player Raiding State (If player is raiding)
