@@ -32,6 +32,12 @@ local PlayerData = ClansAPI.GetPlayerData()
 --- @param PlayerData.ClanId return integer
 --- @param PlayerData.IsLoaded return boolean
 --- @param PlayerData.Clans return table
+--- @param PlayerData.Teritories return table
+--- @param PlayerData.SourceId return integer
+--- @param PlayerData.Identifier return string
+--- @param PlayerData.CharIdentifier return integer
+--- @param PlayerData.CurrentDay return string
+--- @param PlayerData.IsBusy return boolean
 ```
 
 2. Get Player Raiding State (If player is raiding)
