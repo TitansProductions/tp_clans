@@ -24,7 +24,7 @@ API Getter Function
 local ClansAPI = exports.tp_clans:getAPI()
 ```
 
-1. Get Player Data
+1. Get player data.
 
 ```lua
 --- @return table
@@ -41,28 +41,28 @@ local PlayerData = ClansAPI.GetPlayerData()
 --- @param PlayerData.IsBusy return boolean
 ```
 
-2. Get Player Raiding State (If player is raiding)
+2. Get player raiding state (If player is raiding)
 
 ```lua
 --- @return boolean
 local isPlayerRaiding = ClansAPI.IsPlayerRaiding()
 ```
 
-3. Get Player Raiding Clan Id
+3. Get player raiding clan id.
 
 ```lua
 --- @return integer
 local raidedClanId = ClansAPI.GetRaidingClanId()
 ```
 
-4. Get Player Clan Leadership State (if the player is the leader of the clan)
+4. Get player clan leadership state (if the player is the leader of the clan)
 
 ```lua
 --- @return boolean
 local isLeader = ClansAPI.IsPlayerClanLeader()
 ```
 
-5. Get Clan Data
+5. Get clan data
 
 ```lua
 -- @return table
@@ -121,15 +121,15 @@ API Getter Function
 local ClansAPI = exports.tp_clans:getAPI()
 ```
 
-1. Get Clans
+1. Get all clans
 
 ```lua
 --- @return table.
 local Clans = ClansAPI.GetClans()
 ```
 
-3. Get Clan Data By Clan Id
-
+3. Get clan data by clan id.
+   
 ```lua
 -- @param clanId : requires an integer.
 local ClanData = ClansAPI.GetClanData(clanId)
@@ -151,22 +151,101 @@ local ClanData = ClansAPI.GetClanData(clanId)
 
 ```
 
-3. Get Player Clan Id (By Source)
+3. Get player clan id (By Source)
 
 ```lua
 -- @param source : requires an integer (player online id)
 local ClanId = ClansAPI.GetPlayerClanId(source)
+
+--- @param ClanId return 0 if there is no clan
 ```
 
-4. Get Player Clan Id (By Identifiers)
+4. Get player clan id (By Identifiers)
 
 ```lua
 -- @param identifier : requires a string (the player steam hex)
 -- @param charIdentifier : requires an integer (the player character id)
 local ClanId = ClansAPI.GetPlayerClanIdOffline(identifier, charIdentifier)
+
+--- @param ClanId return 0 if there is no clan
 ```
 
-5. 
+5. Kick a player from a clan (Online - By Source)
+
+```lua
+-- @param clanId : requires an integer.
+-- @param source : requires an integer (player online id)
+ClansAPI.KickPlayerClanMember(clanId, source)
+```
+
+6. Kick a player from a clan (Offline - By Identifiers)
+
+```lua
+-- @param clanId : requires an integer.
+-- @param identifier : requires a string (the player steam hex)
+-- @param charIdentifier : requires an integer (the player character id)
+ClansAPI.KickPlayerClanMemberOffline(clanId, identifier, charIdentifier)
+```
+
+7. Add a new clan member(s).
+
+```lua
+-- @param clanId : requires an integer.
+-- @param source : requires an integer (player online id)
+ClansAPI.AddPlayerClanMember(clanId, source)
+```
+
+8. Disband a clan by its id.
+
+```lua
+-- @param clanId : requires an integer.
+ClansAPI.DisbandClanById(clanId)
+```
+
+9. Delete a clan by its id.
+
+```lua
+-- @param clanId : requires an integer.
+ClansAPI.DeleteClanById(clanId)
+```
+
+10. Add clan level
+
+```lua
+-- @param clanId : requires an integer.
+-- @param level : requires an integer
+ClansAPI.AddLevel(clanId, level)
+```
+
+10. Add clan level experience
+
+```lua
+-- @param clanId : requires an integer.
+-- @param experienece : requires an integer (max is 10000 to get a level)
+ClansAPI.AddLevelExperience(clanId, experienece)
+```
+
+11. Check if a clan mission is active.
+
+```lua
+-- @param clanId : requires an integer.
+-- @param missionName : requires a string (a mission name, either a custom one or existing one, ex: 'CRAYFISH')
+local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId, missionName)
+```
+
+12. Decrease the required value if a clan mission is active **(THIS IS ONLY FOR DAILY MISSIONS)**
+
+```lua
+-- @param clanId : requires an integer.
+-- @param missionName : requires a string (a mission name, either a custom one or existing one, ex: 'CRAYFISH')
+local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId, missionName)
+
+-- @param decreaseAmount : requires an integer (decreaseAmount is the input value that you want to decrease from a daily mission, for example, if a player must catch (5) crayfishes, you can set the value to `1` so 4 crayfish catches will remain to do).
+if hasActiveMission then 
+    ClansAPI.DecreaseClanMissionRequiredValueByName(clanId, missionName, decreaseAmount)
+end
+
+```
 
 ### Events
 
