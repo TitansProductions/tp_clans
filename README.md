@@ -252,6 +252,15 @@ end
 
 ```
 
+14. Set an active clan as finished (this is only for weekly missions, the daily missions will be done automatically once reached to 0 actions left).
+
+```lua
+-- MUST DO ALL CHECKS AS `13` EXPORT EXAMPLE.
+-- @param clanId : requires an integer.
+-- @param missionName : requires a string (a mission name, either a custom one or existing one, ex: 'RAID_MISSION')
+ClansAPI.SetClanMissionFinishedByName(clanId, missionName)
+```
+
 ### Events
 
 1. Send an advanced notification to the desired clan.
