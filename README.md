@@ -217,7 +217,7 @@ ClansAPI.DeleteClanById(clanId)
 ClansAPI.AddLevel(clanId, level)
 ```
 
-10. Add clan level experience
+11. Add clan level experience
 
 ```lua
 -- @param clanId : requires an integer.
@@ -225,7 +225,7 @@ ClansAPI.AddLevel(clanId, level)
 ClansAPI.AddLevelExperience(clanId, experienece)
 ```
 
-11. Check if a clan mission is active.
+12. Check if a clan mission is active.
 
 ```lua
 -- @param clanId : requires an integer.
@@ -233,7 +233,7 @@ ClansAPI.AddLevelExperience(clanId, experienece)
 local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId, missionName)
 ```
 
-12. Decrease the required value if a clan mission is active **(THIS IS ONLY FOR DAILY MISSIONS)**
+13. Decrease the required value if a clan mission is active **(THIS IS ONLY FOR DAILY MISSIONS)**
 
 ```lua
 local ClansAPI = exports.tp_clans:getAPI() -- example
