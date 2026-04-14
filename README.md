@@ -236,13 +236,18 @@ local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId
 12. Decrease the required value if a clan mission is active **(THIS IS ONLY FOR DAILY MISSIONS)**
 
 ```lua
--- @param clanId : requires an integer.
--- @param missionName : requires a string (a mission name, either a custom one or existing one, ex: 'CRAYFISH')
-local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId, missionName)
+local ClansAPI = exports.tp_clans:getAPI() -- example
+local clanId   = ClansAPI.GetPlayerClanId(source) -- example
 
--- @param decreaseAmount : requires an integer (decreaseAmount is the input value that you want to decrease from a daily mission, for example, if a player must catch (5) crayfishes, you can set the value to `1` so 4 crayfish catches will remain to do).
-if hasActiveMission then 
-    ClansAPI.DecreaseClanMissionRequiredValueByName(clanId, missionName, decreaseAmount)
+if clanId ~= 0 then -- if clanId equals to 0, it means the player does not belong to any clan.
+    -- @param clanId : requires an integer.
+    -- @param missionName : requires a string (a mission name, either a custom one or existing one, ex: 'CRAYFISH')
+    local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId, missionName)
+
+    -- @param decreaseAmount : requires an integer (decreaseAmount is the input value that you want to decrease from a daily mission, for example, if a player must catch (5) crayfishes, you can set the value to `1` so 4 crayfish catches will remain to do).
+    if hasActiveMission then 
+        ClansAPI.DecreaseClanMissionRequiredValueByName(clanId, missionName, decreaseAmount)
+    end
 end
 
 ```
