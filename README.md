@@ -1,4 +1,4 @@
-## Commands
+# Commands
 
 - @param [source] : The online Player ID. 
 
@@ -12,16 +12,17 @@
 
 - The ace permission: `tp_clans.all` grants permissions to all commands.
 
-## Development API
+# Development API
 
-### CLIENT:
+## CLIENT:
+
+### Exports
 
 API Getter Function
 
 ```lua
 local ClansAPI = exports.tp_clans:getAPI()
 ```
-
 
 1. Get Player Data
 
@@ -83,3 +84,29 @@ local ClanData = PlayerData.Clans[PlayerData.ClanId]
 --- @param ClanData.level_experience return integer
 ```
 
+### Events
+
+1. Send an advanced notification to the desired clan.
+
+```lua
+
+-- @param message : requires a string (the notification message)
+-- @param notificationType : requires a string (success, info, warning)
+-- @param isImportant : requires an integer value (0 = not important, 1 = important )
+local data = {
+    message = message, 
+    type = notificationType, 
+    important = isImportant,
+}
+
+TriggerServerEvent('tp_clans:server:notifications:send', function(clanId, data)
+```
+
+2. Use any desired code when a mission has been successfully finished (weekly missions only). This event is triggered for all the clan members who are online.
+
+```lua
+RegisterNetEvent("tp_clans:client:missions:mission_success")
+AddEventHandler("tp_clans:client:missions:mission_success", function(missionType)
+    -- todo anything
+end)
+```
