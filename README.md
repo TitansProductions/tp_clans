@@ -228,6 +228,8 @@ ClansAPI.AddLevelExperience(clanId, experienece)
 12. Check if a clan mission is active.
 
 ```lua
+local clanId = ClansAPI.GetPlayerClanId(source) -- example
+
 -- @param clanId : requires an integer.
 -- @param missionName : requires a string (a mission name, either a custom one or existing one, ex: 'CRAYFISH')
 local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId, missionName)
@@ -236,8 +238,7 @@ local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId
 13. Decrease the required value if a clan mission is active **(THIS IS ONLY FOR DAILY MISSIONS)**
 
 ```lua
-local ClansAPI = exports.tp_clans:getAPI() -- example
-local clanId   = ClansAPI.GetPlayerClanId(source) -- example
+local clanId = ClansAPI.GetPlayerClanId(source) -- example
 
 if clanId ~= 0 then -- if clanId equals to 0, it means the player does not belong to any clan.
     -- @param clanId : requires an integer.
@@ -256,6 +257,7 @@ end
 
 ```lua
 -- MUST DO ALL CHECKS AS `13` EXPORT EXAMPLE.
+
 -- @param clanId : requires an integer.
 -- @param missionName : requires a string (a mission name, either a custom one or existing one, ex: 'RAID_MISSION')
 ClansAPI.SetClanMissionFinishedByName(clanId, missionName)
