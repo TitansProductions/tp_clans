@@ -115,6 +115,58 @@ end)
 
 ### Exports
 
+API Getter Function
+
+```lua
+local ClansAPI = exports.tp_clans:getAPI()
+```
+
+1. Get Clans
+
+```lua
+--- @return table.
+local Clans = ClansAPI.GetClans()
+```
+
+3. Get Clan Data By Clan Id
+
+```lua
+-- @param clanId : requires an integer.
+local ClanData = ClansAPI.GetClanData(clanId)
+
+--- @param ClanData.coords return table
+--- @param ClanData.furnitures return table
+--- @param ClanData.raids_history return table
+--- @param ClanData.members return table
+--- @param ClanData.notifications return table
+--- @param ClanData.alliances return table
+--- @param ClanData.identifier return string
+--- @param ClanData.charidentifier return integer
+--- @param ClanData.name return string
+--- @param ClanData.id return integer
+--- @param ClanData.ledger return integer
+--- @param ClanData.upgrade return integer
+--- @param ClanData.level return integer
+--- @param ClanData.level_experience return integer
+
+```
+
+3. Get Player Clan Id (By Source)
+
+```lua
+-- @param source : requires an integer (player online id)
+local ClanId = ClansAPI.GetPlayerClanId(source)
+```
+
+4. Get Player Clan Id (By Identifiers)
+
+```lua
+-- @param identifier : requires a string (the player steam hex)
+-- @param charIdentifier : requires an integer (the player character id)
+local ClanId = ClansAPI.GetPlayerClanIdOffline(identifier, charIdentifier)
+```
+
+5. 
 
 ### Events
 
