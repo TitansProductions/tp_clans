@@ -225,7 +225,23 @@ ClansAPI.AddLevel(clanId, level)
 ClansAPI.AddLevelExperience(clanId, experienece)
 ```
 
-12. Check if a clan mission is active.
+12. Add clan points
+
+```lua
+-- @param clanId : requires an integer.
+-- @param points : requires an integer
+ClansAPI.AddPoints(clanId, points)
+```
+
+13. Remove clan points
+
+```lua
+-- @param clanId : requires an integer.
+-- @param points : requires an integer
+ClansAPI.RemovePoints(clanId, points)
+```
+
+14. Check if a clan mission is active.
 
 ```lua
 local clanId = ClansAPI.GetPlayerClanId(source) -- example
@@ -235,7 +251,7 @@ local clanId = ClansAPI.GetPlayerClanId(source) -- example
 local hasActiveMission, missionData = ClansAPI.HasClanMissionActiveByName(clanId, missionName)
 ```
 
-13. Decrease the required value if a clan mission is active **(THIS IS ONLY FOR DAILY MISSIONS)**
+15. Decrease the required value if a clan mission is active **(THIS IS ONLY FOR DAILY MISSIONS)**
 
 ```lua
 local clanId = ClansAPI.GetPlayerClanId(source) -- example
@@ -253,7 +269,7 @@ end
 
 ```
 
-14. Set an active clan as finished (this is only for weekly missions, the daily missions will be done automatically once reached to 0 actions left).
+16. Set an active clan as finished (this is only for weekly missions, the daily missions will be done automatically once reached to 0 actions left).
 
 ```lua
 -- MUST DO ALL CHECKS AS `13` EXPORT EXAMPLE.
