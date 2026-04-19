@@ -13,6 +13,18 @@
 
 - The ace permission: `tp_clans.all` grants permissions to all commands.
 
+# Information
+
+1. In case you don't receive any notifications, is either because you are missing `tp_notify` script that we provide, or you are missing the `clans.png` image. You can redownload the `tp_notify` and add the new image on `tp_notify/html/img/types` directory folder.
+
+__All images can be found here:__
+https://github.com/TitansProductions/tp_notify/tree/main/tp_notify/html/img/types
+
+3. In case you don't receive any webhooks, its because you are not having latest `webhooks.lua` from `tp_libs` script (located on server directory folder). You can checkout here to add the tp_clan webhook options that are missing:
+
+__All webhooks can be found here:__
+https://github.com/TitansProductions/tp_libs/blob/main/tp_libs/server/webhooks.lua
+
 # Development API
 
 Before reading client and server exports and events, you can also edit specific code through `escrow_ignore.lua` files that we provide in client and server directory folders.
