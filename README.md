@@ -110,9 +110,23 @@ TriggerServerEvent('tp_clans:server:notifications:send', clanId, data) -- client
 ```lua
 RegisterNetEvent("tp_clans:client:missions:mission_success")
 AddEventHandler("tp_clans:client:missions:mission_success", function(missionType)
-    -- todo anything
+    -- todo
 end)
 ```
+
+3. This event is triggered exactly once the place dynamite has been exploded.
+
+```lua
+-- @param clanId : requires an integer (main clan id)
+-- @param targetClanId : requires an integer (enemy clan id)
+-- @param coords : returns a table or a vector3 (the coords where the explosion has been made).
+
+RegisterNetEvent('tp_clans:client:raids:on_dynamite_explosion')
+AddEventHandler('tp_clans:client:raids:on_dynamite_explosion', function(clanId, targetClanId, coords)
+    -- todo
+end)
+```
+
 
 ## SERVER:
 
@@ -309,6 +323,6 @@ TriggerEvent('tp_clans:server:notifications:send', clanId, data) -- server > ser
 
 RegisterServerEvent('tp_clans:server:raids:started_raiding')
 AddEventHandler('tp_clans:server:raids:started_raiding', function(source, clanId, targetClanId)
-    -- todo nothing
+    -- todo
 end)
 ```
