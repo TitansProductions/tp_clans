@@ -15,6 +15,8 @@
 
 # Development API
 
+Before reading client and server exports and events, you can also edit specific code through `escrow_ignore.lua` files that we provide in client and server directory folders.
+
 ## CLIENT:
 
 ### Exports
@@ -296,4 +298,17 @@ local data = {
 }
 
 TriggerEvent('tp_clans:server:notifications:send', clanId, data) -- server > server
+```
+
+2. This event is triggered once a raiding has officially started.
+
+```lua
+-- @param source : requires an integer (player online id - the one who started the raid)
+-- @param clanId : requires an integer (source main clan id)
+-- @param targetClanId : requires an integer (enemy clan id)
+
+RegisterServerEvent('tp_clans:server:raids:started_raiding')
+AddEventHandler('tp_clans:server:raids:started_raiding', function(source, clanId, targetClanId)
+    -- todo nothing
+end)
 ```
