@@ -29,15 +29,16 @@ https://github.com/TitansProductions/tp_libs/tree/main/tp_libs/server/webhooks.l
 
 Before reading client and server exports and events, you can also edit specific code through `escrow_ignore.lua` files that we provide in client and server directory folders.
 
+
+## CLIENT:
+
+### Exports
+
 API Getter Function
 
 ```lua
 local ClansAPI = exports.tp_clans:getAPI()
 ```
-
-## CLIENT:
-
-### Exports
 
 1. Get player data.
 
@@ -143,6 +144,12 @@ end)
 ## SERVER:
 
 ### Exports
+
+API Getter Function
+
+```lua
+local ClansAPI = exports.tp_clans:getAPI()
+```
 
 1. Get all clans
 
